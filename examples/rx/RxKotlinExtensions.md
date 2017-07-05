@@ -1,4 +1,6 @@
-https://github.com/ReactiveX/RxKotlin
+# Using of RxKotlin Extensions
+
+https://github.com/ReactiveX/RxKotlin [docs]
 
 **1. Using PlusAssign**
 
