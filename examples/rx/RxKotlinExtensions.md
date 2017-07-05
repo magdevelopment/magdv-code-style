@@ -4,7 +4,7 @@ https://github.com/ReactiveX/RxKotlin [docs]
 
 **1. Using PlusAssign**
 
-Without *plusAssign*:
+Without `plusAssign`:
 ```kotlin
 import io.reactivex.rxkotlin.plusAssign
 
@@ -15,7 +15,7 @@ subscriptions.add(interactor.request(params)
 ```
 
 
-With *plusAssign*:
+With `plusAssign`:
 ```kotlin
 import io.reactivex.rxkotlin.plusAssign
 
@@ -27,7 +27,7 @@ subscriptions += interactor.request(params)
 
 **2. Using SubscribeBy method with named arguments**
 
-Without *SubscribeBy*:
+Without `SubscribeBy`:
 ```kotlin
 Observable.just(1).subscribe(
                 {
@@ -60,7 +60,7 @@ Observable.just(1).subscribe(
         )
 ```
 
-With *SubscribeBy*:
+With `SubscribeBy`:
 ```kotlin
 Observable.just(1).subscribeBy(
                 onNext = {
@@ -95,7 +95,7 @@ Observable.just(1).subscribeBy(
 
 **3. Using Iterable.toObservable extension**
 
-Without *Iterable.toObservable*
+Without `Iterable.toObservable`
 ```kotlin
 val list = listOf(1, 2, 3, 4, 5, 6)
 
@@ -113,7 +113,7 @@ Observable.fromIterable(list)
         )
 ```
 
-With *Iterable.toObservable*
+With `Iterable.toObservable`
 ```kotlin
 val list = listOf(1, 2, 3, 4, 5, 6)
 
