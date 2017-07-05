@@ -23,7 +23,7 @@ https://kotlinlang.org/docs/tutorials/android-plugin.html [Docs]
 </LinearLayout>
 ```
 
-**Without plugin**
+**Without plugin, but with [KotterKnife](https://github.com/JakeWharton/kotterknife)**
 ```kotlin
 class SampleActivity : AppCompatActivity() {
 
