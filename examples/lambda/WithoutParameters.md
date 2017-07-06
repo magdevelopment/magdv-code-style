@@ -2,11 +2,11 @@
 
 ##### Always Multiline
 ```kotlin
-lambda {
+button.onClick {
     oneAction()
 }
 
-lambda {
+button.onClick {
     firstAction()
     secondAction()
 }
@@ -14,9 +14,9 @@ lambda {
 
 ##### Singleline for one action
 ```kotlin
-lambda { oneAction() }
+button.onClick { oneAction() }
 
-lambda {
+button.onClick {
     firstAction()
     secondAction()
 }
