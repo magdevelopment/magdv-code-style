@@ -1,11 +1,5 @@
 # Using of Anko Commons Dialogs
 
-```
-dependencies {
-    compile "org.jetbrains.anko:anko-commons:$anko_version"
-}
-```
-
 ##### Toasts
 ```kotlin
 // Without anko-commons

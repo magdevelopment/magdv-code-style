@@ -1,11 +1,5 @@
 # Using of Anko Commons Intents
 
-```
-dependencies {
-    compile "org.jetbrains.anko:anko-commons:$anko_version"
-}
-```
-
 ##### Simple Intent for activity
 ```kotlin
 // Without Anko-commons
