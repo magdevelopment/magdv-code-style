@@ -22,7 +22,7 @@ class ExampleActivity : AppCompatActivity() {
     }
 
     fun initViews() {
-
+        // Doing some magic
     }
 }
 ```
@@ -39,7 +39,7 @@ class ExampleActivity : AppCompatActivity() {
     }
 
     fun initViews() {
-
+        // Doing some magic
     }
 
     companion object {
