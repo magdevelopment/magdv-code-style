@@ -6,7 +6,7 @@ class Example {
 
     fun providesCargoRepository(cargoApi: ICargoApi): ICargoRepository = CargoRepository(cargoApi, CargoCache())
 
-    //OR
+    //OR without return type
 
     fun providesCargoRepository(cargoApi: ICargoApi) = CargoRepository(cargoApi, CargoCache())
 
