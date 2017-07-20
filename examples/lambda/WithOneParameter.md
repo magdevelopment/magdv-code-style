@@ -40,3 +40,33 @@ function(this::showResult)
 // When need map
 function { showResult(it.toString()) }
 ```
+
+### Function with multiline body
+###### Parameter at the same line with function and body at another one
+```kotlin
+function { result ->
+    doShort()
+    doSomethingWithNormalName()
+    doThisAdvancedFlexibleThingWithReallyLongNameAsync()
+    showResult(result)
+}
+```
+###### Parameter on the second line of function and body at another one
+```kotlin
+function {
+    result ->
+    doShort()
+    doSomethingWithNormalName()
+    doThisAdvancedFlexibleThingWithReallyLongNameAsync()
+    showResult(result)
+}
+```
+###### Parameter and body on same line as function
+```kotlin
+function {
+    doShort()
+    doSomethingWithNormalName()
+    doThisAdvancedFlexibleThingWithReallyLongNameAsync()
+    showResult(it)
+}
+```
