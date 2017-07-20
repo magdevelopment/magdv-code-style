@@ -1,6 +1,46 @@
 # Conditional statements
 
 ### Function calling conditional
+###### Single line when possible
+```kotlin
+if (someTest) doSomething()
+
+if (someTest) doSomething() else doSomethingElse()
+
+if (someTest) {
+    doSomething()
+    doSomethingElse()
+}
+
+if (someTest) {
+    doSomething()
+    doSomething()
+} else {
+    doSomethingElse()
+}
+```
+###### Two lines not enclosed with braces when possible
+```kotlin
+if (someTest)
+    doSomething()
+
+if (someTest)
+    doSomething()
+else
+    doSomethingElse()
+
+if (someTest) {
+    doSomething()
+    doSomethingElse()
+}
+
+if (someTest) {
+    doSomething()
+    doSomething()
+} else {
+    doSomethingElse()
+}
+```
 ###### Always required to be enclosed with braces
 ```kotlin
 if (someTest) {
@@ -25,24 +65,7 @@ if (someTest) {
     doSomethingElse()
 }
 ```
-###### Not enclosed with braces when possible
-```kotlin
-if (someTest) doSomething()
 
-if (someTest) doSomething() else doSomethingElse()
-
-if (someTest) {
-    doSomething()
-    doSomethingElse()
-}
-
-if (someTest) {
-    doSomething()
-    doSomething()
-} else {
-    doSomethingElse()
-}
-```
 ### Guard statements
 ###### Single line when possible
 ```kotlin
