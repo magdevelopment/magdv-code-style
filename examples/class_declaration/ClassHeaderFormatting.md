@@ -70,6 +70,8 @@ class SimpleClass : SuperSimpleClass(),
 }
 ```
 Class extending with properties in constructor and interface implementations
+
+1.
 ```kotlin
 class MyClass(
     private var myProperty: Boolean,
@@ -77,6 +79,22 @@ class MyClass(
     anotherProperty: Int) : SimpleClass(someProperty, anotherProperty),
                             IFirst,
                             ISecond{
+
+    override fun someMethod() {
+        super.someMethod()
+        println(myProperty)
+    }
+}
+```
+2.
+```kotlin
+class MyClass(
+    private var myProperty: Boolean,
+    someProperty: String,
+    anotherProperty: Int
+) : SimpleClass(someProperty, anotherProperty),
+    IFirst,
+    ISecond {
 
     override fun someMethod() {
         super.someMethod()
