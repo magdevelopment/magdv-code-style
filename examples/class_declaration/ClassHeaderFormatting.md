@@ -49,7 +49,7 @@ class SimpleClass(
 
 #### 4. Extending and Implementation
 
-Class extending
+###### Class extending
 ```kotlin
 class SimpleClass : SuperSimpleClass() {
 
@@ -58,7 +58,7 @@ class SimpleClass : SuperSimpleClass() {
     }
 }
 ```
-Class extending with interface implementations
+###### Class extending with interface implementations
 ```kotlin
 class SimpleClass : SuperSimpleClass(),
                     IFirst,
@@ -69,7 +69,7 @@ class SimpleClass : SuperSimpleClass(),
     }
 }
 ```
-Class extending with properties in constructor and interface implementations
+###### Class extending with properties in constructor and interface implementations
 
 1.
 ```kotlin
