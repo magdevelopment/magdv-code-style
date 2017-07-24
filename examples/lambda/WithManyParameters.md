@@ -82,23 +82,6 @@ fetchData { count, title ->
     setTitle(title)
 }
 ```
-###### Parameters on the next line of function and body at another one
-```kotlin
-fetchData {
-    count, title ->
-    setCount(count)
-    setTitle(title)
-}
-
-// OR
-
-fetchData {
-    count, title ->
-
-    setCount(count)
-    setTitle(title)
-}
-```
 ###### Parameters each by each started from the line of function and body at another one
 ```kotlin
 fetchData { count,
@@ -116,6 +99,24 @@ fetchData { count,
     setTitle(title)
 }
 ```
+###### Parameters on the next line of function and body at another one
+```kotlin
+fetchData {
+    count, title ->
+    setCount(count)
+    setTitle(title)
+}
+
+// OR
+
+fetchData {
+    count, title ->
+
+    setCount(count)
+    setTitle(title)
+}
+```
+
 
 ###### Parameters each by each started from the next line of function and body at another one
 ```kotlin
