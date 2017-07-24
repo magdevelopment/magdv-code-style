@@ -102,3 +102,17 @@ class MyClass(
     }
 }
 ```
+3.
+```kotlin
+class MyClass(
+    private var myProperty: Boolean,
+    someProperty: String,
+    anotherProperty: Int
+) : SimpleClass(someProperty, anotherProperty), IFirst, ISecond {
+
+    override fun someMethod() {
+        super.someMethod()
+        println(myProperty)
+    }
+}
+```
