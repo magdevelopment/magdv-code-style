@@ -105,3 +105,22 @@
     </FrameLayout>
 </android.support.v7.widget.CardView>
 ```
+
+### Android
+Если какой-то из основных аргументов (например текст у TextView) не имеет начального значения и будет задан в ходе работы приложения, то такой параметр необходимо указать через `tools`, чтобы его было видно на превью.
+```xml
+<TextView
+    android:id="@+id/idTextView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:text="ID"/>
+```
+Если какой-то из элементов поумолчанию имеет аргумент `android:visibility = gone` (или `invisible`), то такому элементу так же через 'tools' проставляется аргумент `visible`, чтобы его было видно на превью.
+```xml
+<ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    tools:visibility="visible"/>
+```
