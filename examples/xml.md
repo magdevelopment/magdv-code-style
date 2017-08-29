@@ -51,6 +51,7 @@
 Открывающая скобка **тэга** расположена на одной строке с именем **тега**. Закрывающая скобка расположена на той же строке либо в на строке последнего **атрибута**.
 ```xml
 <android.support.v7.widget.CardView>
+
   <TextView
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>
