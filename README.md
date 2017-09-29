@@ -1,1 +1,1 @@
-# magdv-code-style
+# MAG Development Mobile Team Code Style
