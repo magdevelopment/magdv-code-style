@@ -6,8 +6,6 @@ https://github.com/ReactiveX/RxKotlin [docs]
 
 Without `plusAssign`:
 ```kotlin
-import io.reactivex.rxkotlin.plusAssign
-
 subscriptions.add(interactor.request(params)
                 .doOnSubscribe { viewState.showProgress() }
                 .doFinally { viewState.hideProgress() }
