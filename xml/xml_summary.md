@@ -19,6 +19,12 @@
     android:id="@+id/friend_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
+
+<!-- И так тоже неправильно -->
+<TextView
+    android:id="@+id/friendName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
 ```
 
 ## Именование идентификаторов ресурсов цвета
