@@ -47,14 +47,14 @@
             android:padding="16dp"
             android:textColor="#FFFFFF"
             android:textSize="14dp"
-            tools:text="ID"/>
+            tools:text="ID" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
     </FrameLayout>
 </android.support.v7.widget.CardView>
@@ -75,8 +75,9 @@
 
   <TextView
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
-...
+      android:layout_height="match_parent" />
+
+</android.support.v7.widget.CardView>
 ```
 
 ### Атрибуты
@@ -97,10 +98,10 @@
     ...>
 
     <TextView
-        .../>
+        ... />
 
     <ProgressBar
-        .../>
+        ... />
 
 </FrameLayout>
 ```
@@ -110,7 +111,7 @@
 ```xml
 <FrameLayout>
 
-    <TextView/>
+    <TextView />
 
 </FrameLayout>
 ```
@@ -120,9 +121,9 @@
 
     <FrameLayout>
 
-        <TextView/>
+        <TextView />
 
-        <ProgressBar/>
+        <ProgressBar />
 
     </FrameLayout>
 </android.support.v7.widget.CardView>
@@ -135,7 +136,7 @@
     android:id="@+id/idTextView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:text="ID"/>
+    tools:text="ID" />
 ```
 Если какой-то из элементов поумолчанию имеет аргумент `android:visibility = gone` (или `invisible`), то такому элементу так же через 'tools' проставляется аргумент `visible`, чтобы его было видно на превью.
 ```xml
@@ -144,5 +145,5 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:visibility="gone"
-    tools:visibility="visible"/>
+    tools:visibility="visible" />
 ```
