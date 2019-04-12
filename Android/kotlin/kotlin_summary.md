@@ -62,13 +62,25 @@ class SimpleClass(var someProperty: String) {
     }
 }
 ```
+В случаях, когда строка получается слишком длинная следует переносить.
+```kotlin
+class VeryVeryLongNamedClass(
+    var someLongNamedProperty: String
+) {
+
+    fun someMethod() {
+        println(someProperty)
+    }
+}
+```
 
 ##### 3. Класс с более чем одним значением или свойством в конструкторе
-Если в конструкторе класса присутствует более 1 значения или свойства, то они располагается друг под другом, начиная со следующей строки после строки с ключевым словом **class**.
+Если в конструкторе класса присутствует более 1 значения или свойства, то они располагается друг под другом, начиная со следующей строки после строки с ключевым словом **class**. Закрывающая скобка переносится на следующую строку.
 ```kotlin
 class SimpleClass(
     var someProperty: String,
-    val anotherProperty: Int) {
+    val anotherProperty: Int
+) {
 
     fun someMethod() {
         println("$someProperty($anotherProperty)")
@@ -106,9 +118,10 @@ class SimpleClass : SuperSimpleClass(),
 class MyClass(
     private var myProperty: Boolean,
     someProperty: String,
-    anotherProperty: Int) : SimpleClass(someProperty, anotherProperty),
-                            IFirst,
-                            ISecond{
+    anotherProperty: Int
+) : SimpleClass(someProperty, anotherProperty),
+    IFirst,
+    ISecond {
 
     override fun someMethod() {
         super.someMethod()
@@ -120,10 +133,9 @@ class MyClass(
 class MyClass(
     private var myProperty: Boolean,
     someProperty: String,
-    anotherProperty: Int
-) : SimpleClass(someProperty, anotherProperty),
-    IFirst,
-    ISecond {
+    anotherProperty: Int) : SimpleClass(someProperty, anotherProperty),
+                            IFirst,
+                            ISecond{
 
     override fun someMethod() {
         super.someMethod()
@@ -145,9 +157,21 @@ class MyClass(
 }
 ```
 
-#### Расположение объекта компаньона
+#### Структура классов
 
-Объект компаньон располагается в самом низу класса
+https://kotlinlang.org/docs/reference/coding-conventions.html#class-layout
+
+Примерный перевод:
+> Содержимое класса сортируется в следующем порядке:
+1. Описание свойств и блоки инициализации
+1. Вторичные конструкторы
+1. Описание методов*
+1. Объект компаньон
+
+>* Не сортируйте описания методов в алфавитном или модификаторно видимом порядке и не отделяйте обычные методы от методов расширения. Вместо этого, размещайте связанные блоки вместе, так чтобы при чтении класса сверху вниз было возможно отслеживать логику того, что происходит. Выбирайте порядок (Либо сперва вещи более высокого уровня, либо наоборот) и придерживайтесь его.
+* Размещайте внутренние классы в том порядке, в котором они используются в коде. Если эти классы предназначены для их использования снаружи и не имеют связи внутри класса, то размещайте такие классы после объекта компаньона.
+* При реализации интерфейса следует реализовывать их методы в том же порядке, что и они сами (по необходимости, среди них размещаются приватные методы, которые необходимы для реализации интеферфейсов).
+
 ```kotlin
 class ExampleActivity : AppCompatActivity() {
 
@@ -156,10 +180,15 @@ class ExampleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
+        initViews()
     }
 
-    fun initViews() {
+    private fun initViews() {
         // Doing some magic
+    }
+
+    fun someFun() {
+        // Doing some Fun
     }
 
     companion object {
@@ -224,6 +253,15 @@ fun example(nullableArg: String?) {
     if (nullableArg == null) return
 
     doSomething()
+}
+
+// Пример с правильным разNULLением проперти
+var someProperty: String? = null
+
+fun example() {
+    val someProperty = someProperty ?: return
+
+    doSomething(someProperty)
 }
 
 // А вот тут уже неправильно!
